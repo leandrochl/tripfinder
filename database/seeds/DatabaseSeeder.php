@@ -16,11 +16,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
       // TIPO DE USUARIO ===========================
-      DB::table('users_types')->insert([
+      DB::table('user_types')->insert([
           'descricao' => 'Administrador',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
-      DB::table('users_types')->insert([
+      DB::table('user_types')->insert([
           'descricao' => 'Cliente',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
           'email' => 'admin@email.com',
           'name' => 'Administrador',
           'password' => Hash::make('12345678'),
-          'tipo_usuario' => 1,
+          'user_type' => 1,
           'api_token' => Str::random(60),
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);

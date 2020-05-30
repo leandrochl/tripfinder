@@ -14,8 +14,8 @@ class AlterUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-          $table->unsignedBigInteger('tipo_usuario');
-          $table->foreign('tipo_usuario')->references('id')->on('tipo_usuario');
+          $table->unsignedBigInteger('user_type');
+          $table->foreign('user_type')->references('id')->on('user_types');
         });
     }
 
@@ -27,7 +27,7 @@ class AlterUsersTable extends Migration
     public function down()
     {
       Schema::table('users', function (Blueprint $table) {
-        $table->dropColumn('tipo_usuario');
+        $table->dropColumn('user_types');
       });
     }
 }

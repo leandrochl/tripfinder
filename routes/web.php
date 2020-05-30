@@ -28,7 +28,3 @@ Route::post('/admin/paginas/homepage/salvar', 'PageHomepageController@salvarPont
 Route::get('/admin/paginas/homepage/editar', 'PageHomepageController@salvarPontoTuristico')->name('editar.pontoTuristico');
 
 Auth::routes();
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

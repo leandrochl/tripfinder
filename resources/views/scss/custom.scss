@@ -1,6 +1,8 @@
-$theme-colors: (
-  "orange": #ff2d20
-);
+$body-bg: #f8fafc;
+
+$font-family-sans-serif: "Nunito", sans-serif;
+
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 //import scss from node_modules
 @import '~bootstrap/scss/bootstrap'
