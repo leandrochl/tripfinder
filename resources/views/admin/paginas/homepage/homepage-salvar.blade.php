@@ -17,7 +17,7 @@
 
 <hr />
 <div class="card">
-    <form role="form" action="@if ($action == 'update') {{ route('edit.pontoTuristico', ['id' => $pt->id]) }} @else {{ route('salvar.pontoTuristico') }} @endif" method="post" enctype="multipart/form-data">
+    <form role="form" action="@if ($action == 'update') {{ route('update.pontoTuristico', ['id' => $pt->id]) }} @else {{ route('salvar.pontoTuristico') }} @endif" method="post" enctype="multipart/form-data">
         @csrf
         <div class="card-body">
             <div class="row">
@@ -30,15 +30,15 @@
 
                     <div class="form-group">
                         <label for="pais">País</label>
-                        <input type="text" class="form-control" id="pais" value="@if($action == 'update') {{$pt->name}} @endif" name="pais" placeholder="Ex: Brasil">
+                        <input type="text" class="form-control" id="pais" value="@if($action == 'update') {{$pt->pais}} @endif" name="pais" placeholder="Ex: Brasil">
                     </div>
                     <div class="form-group">
                         <label for="local">Local</label>
-                        <input type="text" class="form-control" id="local" value="@if($action == 'update') {{$pt->email}} @endif" name="local" placeholder="Ex: Pão de açúcar">
+                        <input type="text" class="form-control" id="local" value="@if($action == 'update') {{$pt->local}} @endif" name="local" placeholder="Ex: Pão de açúcar">
                     </div>
                     <div class="form-group">
                         <label for="descricao">Descrição</label>
-                        <input type="text" class="form-control" id="descricao" value="@if($action == 'update') {{$pt->razao_social}} @endif" name="descricao">
+                        <input type="text" class="form-control" id="descricao" value="@if($action == 'update') {{$pt->descricao}} @endif" name="descricao">
                     </div>
                     <div class="form-group">
                         <label for="imagem">Imagem</label><br />

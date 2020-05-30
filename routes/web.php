@@ -25,6 +25,8 @@ Route::get('/admin/dashboard', 'DashboardController@index')->name('admin.dashboa
 Route::get('/admin/paginas/homepage', 'PageHomepageController@index')->name('admin.paginas.homepage');
 Route::get('/admin/paginas/homepage/novo', 'PageHomepageController@novoPontoTuristico')->name('novo.pontoTuristico');
 Route::post('/admin/paginas/homepage/salvar', 'PageHomepageController@salvarPontoTuristico')->name('salvar.pontoTuristico');
-Route::get('/admin/paginas/homepage/editar', 'PageHomepageController@salvarPontoTuristico')->name('editar.pontoTuristico');
+Route::get('/admin/paginas/homepage/editar/{id}', 'PageHomepageController@editarPontoTuristico')->name('editar.pontoTuristico');
+Route::post('/admin/paginas/homepage/update/{id}', 'PageHomepageController@updatePontoTuristico')->name('update.pontoTuristico');
+Route::get('/admin/paginas/homepage/delete/{id}', 'PageHomepageController@deletePontoTuristico')->name('delete.pontoTuristico');
 
 Auth::routes();

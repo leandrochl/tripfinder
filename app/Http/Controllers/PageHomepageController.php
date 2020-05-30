@@ -52,41 +52,6 @@ class PageHomepageController extends Controller
     }
 
 
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
     public function getPontosTuristicos(){
       $pt = TouristicPoint::all();
       $html = "";
@@ -102,8 +67,8 @@ class PageHomepageController extends Controller
         } else{
           $html .= '         <button type="button" class="btn btn-default set-homepage" id="set-' . $value['id'] . '"><i class="fas fa-home"></i></button>';
         }
-        $html .= '         <button type="button" class="btn btn-info" id=""><i class="fas fa-pencil-alt"></i></button>';
-        $html .= '         <button type="button" class="btn btn-danger" id=""><i class="far fa-trash-alt"></i></button>';
+        $html .= '         <a href="' . route("editar.pontoTuristico", ['id' => $value['id']]) . '" class="btn btn-info" id=""><i class="fas fa-pencil-alt"></i></a>';
+        $html .= '         <a href="' . route("delete.pontoTuristico", ['id' => $value['id']]) . '" class="btn btn-danger" id=""><i class="far fa-trash-alt"></i></a>';
         $html .= '     </td>';
         $html .= ' </tr>';
       }
@@ -133,6 +98,38 @@ class PageHomepageController extends Controller
         }
       }
 
+    }
+
+    public function editarPontoTuristico($id){
+      $pt = TouristicPoint::find($id);
+      return view('admin.paginas.homepage.homepage-salvar', [
+        'action' => 'update',
+        'pt' => $pt
+        ]);
+    }
+
+    public function updatePontoTuristico(Request $request, $id){
+
+        $pt = TouristicPoint::find($id);
+        if(isset($pt)){
+          $file = $request->file('imagem');
+          $pt->pais = $request->input('pais');
+          $pt->local = $request->input('local');
+          $pt->descricao = $request->input('descricao');
+          $pt->imagem = $file->store('pontos');
+          $pt->homepage = false;
+          $pt->save();
+        }
+
+        return redirect()->route('admin.paginas.homepage');
+    }
+
+    public function deletePontoTuristico($id){
+      $pt = TouristicPoint::find($id);
+      if(isset($pt)){
+        $pt->delete();
+      }
+      return redirect()->route('admin.paginas.homepage');
     }
 
 }
