@@ -16,15 +16,21 @@ class AttractionsSeeder extends Seeder
     public function run()
     {
       DB::table('attractions')->insert([
-          'descricao' => 'Catedral de Brasília',
+          'nome_pt_br' => 'Catedral de Brasília',
+          'nome_eng' => '',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('attractions')->insert([
-          'descricao' => 'Tokyo Tower',
+          'nome_pt_br' => '',
+          'nome_eng' => 'Tokyo Tower',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('attractions')->insert([
-          'descricao' => 'Ilha de Páscoa',
+          'nome_pt_br' => 'Ilha de Páscoa',
+          'nome_eng' => '',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
     }

@@ -16,15 +16,21 @@ class DistrictsSeeder extends Seeder
     public function run()
     {
       DB::table('districts_wards')->insert([
-          'descricao' => 'Plano piloto',
+          'nome_pt_br' => 'Plano piloto',
+          'nome_eng' => '',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('districts_wards')->insert([
-          'descricao' => 'Minato',
+          'nome_pt_br' => 'Minato',
+          'nome_eng' => 'Minato',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('districts_wards')->insert([
-          'descricao' => 'Ilha de Páscoa',
+          'nome_pt_br' => 'Ilha de Páscoa',
+          'nome_eng' => '',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
     }

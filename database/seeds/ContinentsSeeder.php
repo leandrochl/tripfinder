@@ -16,23 +16,39 @@ class ContinentsSeeder extends Seeder
     public function run()
     {
       DB::table('continents')->insert([
-          'descricao' => 'Ámerica',
+          'nome_pt_br' => 'América',
+          'nome_eng' => 'America',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('continents')->insert([
-          'descricao' => 'Ásia',
+          'nome_pt_br' => 'Ásia',
+          'nome_eng' => 'Asia',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('continents')->insert([
-          'descricao' => 'África',
+          'nome_pt_br' => 'África',
+          'nome_eng' => 'Africa',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('continents')->insert([
-          'descricao' => 'Europa',
+          'nome_pt_br' => 'Europa',
+          'nome_eng' => 'Europe',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('continents')->insert([
-          'descricao' => 'Oceania',
+          'nome_pt_br' => 'Austrália',
+          'nome_eng' => 'Australia',
+          'descricao' => '',
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s')
+      ]);
+      DB::table('continents')->insert([
+          'nome_pt_br' => 'Antártica',
+          'nome_eng' => 'Antartica',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
     }

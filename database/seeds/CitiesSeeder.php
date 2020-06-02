@@ -16,15 +16,21 @@ class CitiesSeeder extends Seeder
     public function run()
     {
       DB::table('cities')->insert([
-          'descricao' => 'Brasília',
+          'nome_pt_br' => 'Brasília',
+          'nome_eng' => '',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('cities')->insert([
-          'descricao' => 'Tokyo',
+          'nome_pt_br' => '',
+          'nome_eng' => 'Tokyo',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('cities')->insert([
-          'descricao' => 'Ilha de Páscoa',
+          'nome_pt_br' => 'Ilha de Páscoa',
+          'nome_eng' => '',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
     }

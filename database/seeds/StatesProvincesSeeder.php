@@ -16,15 +16,21 @@ class StatesProvincesSeeder extends Seeder
     public function run()
     {
       DB::table('states_provinces_prefectures')->insert([
-          'descricao' => 'Distrito Federal',
+          'nome_pt_br' => 'Distrito Federal',
+          'nome_eng' => '',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('states_provinces_prefectures')->insert([
-          'descricao' => 'Kanto',
+          'nome_pt_br' => 'Kanto',
+          'nome_eng' => 'Kanto',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
       DB::table('states_provinces_prefectures')->insert([
-          'descricao' => 'Ilha de Páscoa',
+          'nome_pt_br' => 'Ilha de Páscoa',
+          'nome_eng' => 'Ilha de Páscoa',
+          'descricao' => '',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
     }
