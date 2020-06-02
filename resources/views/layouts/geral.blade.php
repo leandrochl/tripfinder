@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-
-    <!-- Fontawesome -->
-    {{-- <link href="{{ asset('fontawesome/css/all.min.css') }}" rel="stylesheet"> --}}
+    <link href="{{ url(mix('site/css/style.css')) }}" rel="stylesheet">
+    <link href="{{ url(mix('css/custom.css')) }}" rel="stylesheet">
 
     @yield('css')
 
@@ -50,12 +47,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{{ asset('js/jquery.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
-
-    <!-- Fontawesome -->
-    {{-- <script src="{{ asset('fontawesome/js/all.min.js') }}"></script> --}}
+    <script src="{{ url(mix('js/jquery.js')) }}"></script>
+    <script src="{{ url(mix('js/bootstrap.js')) }}"></script>
 
     @yield('js')
 

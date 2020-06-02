@@ -56,11 +56,11 @@
 @stop
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+<link rel="stylesheet" href="{{ url(mix('admin/css/style.css')) }}">
 @stop
 
 @section('js')
-<script src="{{ asset('js/admin/paginas/homepage.js') }}" defer></script>
+<script src="{{ url(mix('admin/js/homepage.js')) }}" defer></script>
 <script>
     $.ajaxSetup({
         headers: {

@@ -17,5 +17,5 @@
 @stop
 
 @section('js')
-<script src="{{asset('js/site/homepage.js')}}" type="text/javascript"></script>
+  <script src="{{ url(mix('site/js/homepage.js')) }}"></script>
 @stop

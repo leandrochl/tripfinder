@@ -1,5 +1,9 @@
 {
-    "/css/custom.css": "/css/custom.css",
-    "/js/jquery.js": "/js/jquery.js",
-    "/js/bootstrap.js": "/js/bootstrap.js"
+    "/css/custom.css": "/css/custom.css?id=4a0e10c3fd8dd5794626",
+    "/site/css/style.css": "/site/css/style.css?id=98a00151de4392e52b4d",
+    "/admin/css/style.css": "/admin/css/style.css?id=9aeaa42c77cefe6b0966",
+    "/js/jquery.js": "/js/jquery.js?id=23c7c5d2d1317508e807",
+    "/js/bootstrap.js": "/js/bootstrap.js?id=4d5e7e6ccbe7360bc74e",
+    "/site/js/homepage.js": "/site/js/homepage.js?id=cb970baaa1973b7a2a14",
+    "/admin/js/homepage.js": "/admin/js/homepage.js?id=d765e498f28a0491871d"
 }
