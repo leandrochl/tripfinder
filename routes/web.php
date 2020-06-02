@@ -21,7 +21,6 @@ Route::get('/home', function () {
 })->name('site.home');
 
 Route::get('/admin/dashboard', 'DashboardController@index')->name('admin.dashboard');
-
 Route::get('/admin/paginas/homepage', 'PageHomepageController@index')->name('admin.paginas.homepage');
 Route::get('/admin/paginas/homepage/novo', 'PageHomepageController@novoPontoTuristico')->name('novo.pontoTuristico');
 Route::post('/admin/paginas/homepage/salvar', 'PageHomepageController@salvarPontoTuristico')->name('salvar.pontoTuristico');

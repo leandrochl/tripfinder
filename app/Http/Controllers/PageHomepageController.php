@@ -117,7 +117,6 @@ class PageHomepageController extends Controller
           $pt->local = $request->input('local');
           $pt->descricao = $request->input('descricao');
           $pt->imagem = $file->store('pontos');
-          $pt->homepage = false;
           $pt->save();
         }
 
